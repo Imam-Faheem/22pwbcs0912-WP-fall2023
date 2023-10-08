@@ -120,10 +120,13 @@ background-color: #005f92;
 
 }
 
+
 @media screen and (max-width: 900px) {
 
     .menu-icon input {
 display: none; /* Hide the checkbox initially */
+}
+.heroTextBox h1{z-index: -1;
 }
 
 .menu-icon label {
@@ -149,7 +152,7 @@ display: none;
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
         right: 0;
         background-color: #1b1b1be7;
@@ -164,11 +167,12 @@ display: none;
 .hireMeBtn.active {
     display: block;
     flex-direction: column;
-        position: absolute;
+        position: fixed;
+    border-radius: 5px;
         
-        top: 380px;
-        right: 41%;
-        background-color: #9e9e9e;
+        top: 420px;
+        right: 28%;
+        transform: translate(-50%, -50%);
     }
 
     
@@ -456,6 +460,7 @@ display: none;
         display: flex;
         flex-direction: row;
         max-width: 400px;
+        font-size: 18px;
     }
     
     
@@ -464,11 +469,46 @@ display: none;
         margin: 0%;
         font-weight: lighter;
         color: rgb(124, 124, 124);
-        margin-left: 10px;
+        margin-left: 0px;
         font-size: 16px;
     }
 
 }
+
+@media screen and (max-width: 418px) {
+    .info h2 {
+        margin-bottom: 18px;
+        margin-left: 0px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: row;
+        max-width: fit-content;
+
+        font-size: 16px;
+    }
+    .info h2 p {
+        width: fit-content;
+        margin: 0%;
+        font-weight: lighter;
+        color: rgb(124, 124, 124);
+        margin-left: 0px;
+        font-size: 14px;
+    }
+    .info h2:nth-child(n+2):nth-child(-n+3)  {
+        width: fit-content;
+      }
+
+      .info h2:nth-child(n+2):nth-child(-n+3) p:nth-child(n+2):nth-child(-n+3) {
+        width: fit-content;
+        margin: 0%;
+        font-weight: lighter;
+        color: rgb(124, 124, 124);
+        margin-left: 0px;
+        font-size: 14px;
+    }
+
+    }
+
 
 /* --------Resume------- */
 body {
@@ -546,7 +586,8 @@ body {
     font-weight: bold;
 }
 .job-date {
-    color: #8d8d8d;
+     color: #6d6d6d;
+    font-size: small;
 }
 .job-description {
     margin-top: 8px;
@@ -1021,12 +1062,39 @@ background-color: #005f92;
 
 .social-icons a {
     color: #fff;
+    
     text-decoration: none;
     font-size: 24px;
     transition: color 0.3s ease;
+    margin-left: 0px;
+    gap: 20px;
+    /* filter: grayscale(100%) brightness(80%) contrast(10); */
+    /* filter: brightness(10) invert(1); */
+
     margin-left: 20px;
 }
+.social-icons a svg {
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 1px #ffffff69;
 
-.social-icons a:hover {
-    color: #0077b5;
+padding: 5px;
+margin-left: 10px;
+margin-right: 10px;
+
+    
+}
+
+.social-icons a svg:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease-in;
+    box-shadow: 2px 2px 2px 3px #21212169;
+
+
+    
+}
+@media (max-width: 768px) {
+    .social-icons a {
+        
+        margin-left: 0px;
+    }
 }
